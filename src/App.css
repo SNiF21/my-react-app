@@ -17,6 +17,36 @@
   margin-bottom: 0;
 }
 
+.exercise-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.exercise-nav button {
+  font-size: 0.9rem;
+}
+
+.exercise-nav button.active {
+  color: var(--bg);
+  background: var(--accent);
+}
+
+.exercise-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.exercise-pager span {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
 .controls,
 .profile-form,
 .shopping-form {
@@ -63,6 +93,11 @@ select {
 .score {
   font-size: 2rem;
   font-weight: 600;
+  color: var(--text-h);
+}
+
+h3 {
+  margin: 0 0 4px;
   color: var(--text-h);
 }
 
