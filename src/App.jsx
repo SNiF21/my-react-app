@@ -1,17 +1,28 @@
 import './App.css'
-import Welcome from './Welcome'
-import Counter from './Counter'
-import NameForm from './NameForm'
-import TodoList from './TodoList'
+import EditableProfile from './EditableProfile'
+import ScoreControls from './ScoreControls'
+import ShoppingList from './ShoppingList'
+
+const activeExercise = 2
 
 function App() {
+  let exercise
+
+  switch (activeExercise) {
+    case 2:
+      exercise = <EditableProfile />
+      break
+    case 3:
+      exercise = <ShoppingList />
+      break
+    default:
+      exercise = <ScoreControls />
+  }
+
   return (
     <div className="App">
-      <h1>React notes</h1>
-      <Welcome name="Alice" age={25} />
-      <Counter />
-      <NameForm />
-      <TodoList />
+      <h1>useState exercises</h1>
+      {exercise}
     </div>
   )
 }
